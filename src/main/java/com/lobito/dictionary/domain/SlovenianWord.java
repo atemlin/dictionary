@@ -10,9 +10,9 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "slovenian_words")
-public class SlovenianDictionary extends DictionaryEntity {
+public class SlovenianWord extends DictionaryEntity {
 
-    public SlovenianDictionary(String word) {
+    public SlovenianWord(String word) {
         super(word);
     }
 

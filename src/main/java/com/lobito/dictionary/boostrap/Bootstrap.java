@@ -1,16 +1,16 @@
 package com.lobito.dictionary.boostrap;
 
-import com.lobito.dictionary.domain.SlovenianDictionary;
-import com.lobito.dictionary.repositories.SlovenianDictionaryRepository;
+import com.lobito.dictionary.domain.SlovenianWord;
+import com.lobito.dictionary.repositories.SlovenianWordRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Bootstrap implements CommandLineRunner {
-    SlovenianDictionaryRepository sloRepo;
+    SlovenianWordRepository slovenianRepo;
 
-    public Bootstrap(SlovenianDictionaryRepository sloRepo) {
-        this.sloRepo = sloRepo;
+    public Bootstrap(SlovenianWordRepository sloRepo) {
+        this.slovenianRepo = sloRepo;
     }
 
     @Override
@@ -20,8 +20,8 @@ public class Bootstrap implements CommandLineRunner {
         System.out.println("*** Slovenian section");
         //SlovenianDictionary sloDictionary = new SlovenianDictionary();
         //sloDictionary.setWord("ena");
-        sloRepo.save(new SlovenianDictionary("ena"));
-        sloRepo.save(new SlovenianDictionary("dve"));
+        slovenianRepo.save(new SlovenianWord("ena"));
+        slovenianRepo.save(new SlovenianWord("dve"));
 
     }
 }
