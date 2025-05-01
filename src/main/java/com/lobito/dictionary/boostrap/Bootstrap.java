@@ -21,6 +21,7 @@ public class Bootstrap implements CommandLineRunner {
         //SlovenianDictionary sloDictionary = new SlovenianDictionary();
         //sloDictionary.setWord("ena");
         slovenianRepo.save(new SlovenianWord("ena"));
+        slovenianRepo.save(new SlovenianWord("štiri"));
         slovenianRepo.save(new SlovenianWord("dve"));
 
     }
